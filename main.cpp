@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
                            Qt::WindowSystemMenuHint;
     viewer.setFlags(flag);
     viewer.setResizeMode(QQuickView::SizeRootObjectToView);
-    viewer.resize(QSize(480, 320));
+    viewer.resize(QSize(640, 480));
     viewer.setSource(QUrl::fromLocalFile(QLatin1String(source)));
     viewer.show();
     return app.exec();
