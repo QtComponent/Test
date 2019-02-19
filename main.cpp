@@ -16,7 +16,16 @@ int main(int argc, char *argv[])
     QQuickView viewer;
 #endif
 
-    const char *source = "c:\\Users\\Strong\\Documents\\workspace\\QtComponent\\ScrollBar\\Test.qml";
+    const char *source = "c:\\Users\\Strong\\Documents\\workspace\\QtComponent\\ScrollBar\\Test\\Test1.qml";
+    Qt::WindowFlags flag = Qt::Dialog |
+                           Qt::MSWindowsFixedSizeDialogHint |
+                           Qt::WindowTitleHint |
+                           Qt::WindowCloseButtonHint |
+                           Qt::CustomizeWindowHint |
+                           Qt::WindowSystemMenuHint;
+    viewer.setFlags(flag);
+    viewer.setResizeMode(QQuickView::SizeRootObjectToView);
+    viewer.resize(QSize(480, 320));
     viewer.setSource(QUrl::fromLocalFile(QLatin1String(source)));
     viewer.show();
     return app.exec();
